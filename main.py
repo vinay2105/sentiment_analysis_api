@@ -16,7 +16,7 @@ async def root():
     }
 
 
-@app.post("Review")
+@app.post("/Review")
 async def Review(request: ReviewRequest):
     review = request.review
     analysis = sentiment_pipeline(review)[0]
